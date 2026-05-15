@@ -1,10 +1,8 @@
-#!name=⚡ Nguyễn Ngọc Anh Tú 🌸 - Premium (Ultimate)
+#!name=⚡ Huy IT 🌸 - Premium (Ultimate)
 #!desc=✨ 26 Apps Premium: Locket Gold + YouTube + Spotify + SoundCloud + PicsArt + Lightroom + Photoshop + Emby + KineMaster + Djay + Calm + Busuu + Headspace + AlightMotion + Wink + Truecaller + CamScanner + BeautyPlus + VSCO + Snow + Meitu + Funimate + iTunes + WPS Office + Xmind + Alarmy + Sub-Store
 #!version=1.0.3
 #!date=2026-05-13
-#!author=Nguyễn Ngọc Anh Tú (z3rokaze)
-#!homepage=https://github.com/ekaznyra/NguyenNgocAnhTu
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Unlock.png
+#!author=Huy IT
 
 [Rule]
 # === BLOCK QUIC FOR YOUTUBE MITM ===
