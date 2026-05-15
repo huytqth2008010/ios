@@ -1,5 +1,5 @@
-#!name=⚡ Huy IT Premium - Shadowrocket
-#!desc=25 Apps: Locket Gold + YouTube + Spotify + SoundCloud + PicsArt + Lightroom + Photoshop + Emby + KineMaster + Djay + Calm + Busuu + Headspace + AlightMotion + Wink + Truecaller + CamScanner + BeautyPlus + VSCO + Snow + Meitu + Funimate + iTunes + WPS + Xmind + Sub-Store
+#!name=⚡ Huy IT 🌸 - Premium (Ultimate)
+#!desc=✨ 26 Apps Premium: Locket Gold + YouTube + Spotify + SoundCloud + PicsArt + Lightroom + Photoshop + Emby + KineMaster + Djay + Calm + Busuu + Headspace + AlightMotion + Wink + Truecaller + CamScanner + BeautyPlus + VSCO + Snow + Meitu + Funimate + iTunes + WPS Office + Xmind + Alarmy + Sub-Store
 #!version=1.0.3
 #!date=2026-05-13
 #!author=Huy IT
@@ -36,87 +36,87 @@ Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=ht
 Sub-Store Sync=type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 
 # 📺 YouTube Premium - ekaznyra
-youtube-request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/youtube.response.js
-youtube-response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/youtube.response.js,argument={"lyricLang":"vi","captionLang":"vi","blockUpload":false,"blockImmersive":false,"debug":false}
+youtube-request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/youtube.response.js
+youtube-response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/youtube.response.js,argument={"lyricLang":"vi","captionLang":"vi","blockUpload":false,"blockImmersive":false,"debug":false}
 
 # 🎵 Spotify Premium (app2smile)
 spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 
 # 🔐 RevenueCat Multi-App (Locket Gold)
-revenuecat-response = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/revenuecat_multi.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
-revenuecat-header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/deleteHeader.js,timeout=60,engine=jsc
-revenuecat-backup = type=http-response,pattern=^https:\/\/api\.rc-backup\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/revenuecat_multi.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
+revenuecat-response = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/revenuecat_multi.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
+revenuecat-header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/deleteHeader.js,timeout=60,engine=jsc
+revenuecat-backup = type=http-response,pattern=^https:\/\/api\.rc-backup\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/revenuecat_multi.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
 
 # 🎧 SoundCloud Go+
-soundcloud-response = type=http-response,pattern=^https:\/\/api-mobile\.soundcloud\.com\/configuration\/ios$,requires-body=1,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/SoundCloudGoPlus.js
+soundcloud-response = type=http-response,pattern=^https:\/\/api-mobile\.soundcloud\.com\/configuration\/ios$,requires-body=1,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/SoundCloudGoPlus.js
 
 # 🎨 PicsArt Gold
-picsart-response = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/PicsArt.js,requires-body=true,timeout=60,engine=jsc
-picsart-storages = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/PicsArt.js,requires-body=true,timeout=60,engine=jsc
+picsart-response = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/PicsArt.js,requires-body=true,timeout=60,engine=jsc
+picsart-storages = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/PicsArt.js,requires-body=true,timeout=60,engine=jsc
 
 # 🎨 Lightroom
-lightroom-response = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/lightroom.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+lightroom-response = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/lightroom.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🎨 Photoshop Express
-photoshop-response = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/photoshop.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+photoshop-response = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/photoshop.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🎬 Emby Premiere
-emby-response = type=http-response,pattern=^https?:\/\/mb3admin\.com\/admin\/service\/registration\/validateDevice,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/emby.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+emby-response = type=http-response,pattern=^https?:\/\/mb3admin\.com\/admin\/service\/registration\/validateDevice,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/emby.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🎬 KineMaster Pro
-kinemaster-response = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/Kinemaster.js
+kinemaster-response = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/Kinemaster.js
 
 # 🎵 Djay Pro
-djay-response = type=http-response,pattern=^https:\/\/app\.algoriddim\.com\/api\/v1\/validate-receipt,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/djay.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+djay-response = type=http-response,pattern=^https:\/\/app\.algoriddim\.com\/api\/v1\/validate-receipt,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/djay.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🧘 Calm
-calm-response = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/calm.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+calm-response = type=http-response,pattern=^https:\/\/api\.calm\.com\/me$,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/calm.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 📚 Busuu
-busuu-response = type=http-response,pattern=^https:\/\/api\.busuu\.com\/users\/me,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/bussu.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+busuu-response = type=http-response,pattern=^https:\/\/api\.busuu\.com\/users\/me,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/bussu.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🧘 Headspace
-headspace-response = type=http-response,pattern=^https:\/\/api\.prod\.headspace\.com\/.*\/user-subscriptions,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/headspace.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+headspace-response = type=http-response,pattern=^https:\/\/api\.prod\.headspace\.com\/.*\/user-subscriptions,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/headspace.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🎬 AlightMotion Pro
-alightmotion-response = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,requires-body=true,max-size=131072,timeout=10,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/AlightMotion.js
+alightmotion-response = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,requires-body=true,max-size=131072,timeout=10,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/AlightMotion.js
 
 # 💄 Wink VIP
-wink-response = type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/WinkVipCrack.js
+wink-response = type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/WinkVipCrack.js
 
 # 📞 Truecaller Premium
-truecaller-response = type=http-response,pattern=^https:\/\/premium-(.+)\.truecaller\.com\/v\d\/(subscriptions|products\/apple),requires-body=1,max-size=0,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/TrueCaller.js
+truecaller-response = type=http-response,pattern=^https:\/\/premium-(.+)\.truecaller\.com\/v\d\/(subscriptions|products\/apple),requires-body=1,max-size=0,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/TrueCaller.js
 
 # 📄 CamScanner Premium
-camscanner-response = type=http-response,pattern=^https:\/\/(api|api-cs.*)\.intsig\.net\/(purchase\/cs\/query_prop|queryProperty|getPrivilegeItem),requires-body=1,timeout=15,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/camScanner.js
+camscanner-response = type=http-response,pattern=^https:\/\/(api|api-cs.*)\.intsig\.net\/(purchase\/cs\/query_prop|queryProperty|getPrivilegeItem),requires-body=1,timeout=15,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/camScanner.js
 
 # 💄 BeautyPlus Premium
-beautyplus-response = type=http-response,pattern=^https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance),requires-body=true,max-size=-1,timeout=60,engine=jsc,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/BeautyPlus.js
+beautyplus-response = type=http-response,pattern=^https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance),requires-body=true,max-size=-1,timeout=60,engine=jsc,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/BeautyPlus.js
 
 # 📸 VSCO X
-vsco-response = type=http-response,pattern=^https:\/\/vsco\.co\/api\/subscriptions\/2\.1\/user-subscriptions,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/VSCO.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+vsco-response = type=http-response,pattern=^https:\/\/vsco\.co\/api\/subscriptions\/2\.1\/user-subscriptions,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/VSCO.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # ❄️ Snow / Epik
-snow-response = type=http-response,pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/Snow.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
+snow-response = type=http-response,pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/Snow.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
 
 # 🎨 Meitu XiuXiu
-meitu-response = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/MeiTuXiuXiu.js,requires-body=true,timeout=60,engine=jsc
+meitu-response = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/MeiTuXiuXiu.js,requires-body=true,timeout=60,engine=jsc
 
 # 🎬 Funimate Pro
-funimate-response = type=http-response,pattern=^https:\/\/api\.funimate\.com\/users\/me,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/funimate.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
+funimate-response = type=http-response,pattern=^https:\/\/api\.funimate\.com\/users\/me,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/funimate.js,requires-body=true,max-size=131072,timeout=10,engine=jsc
 
 # 🍎 iTunes Premium (250+ Apps)
-itunes-response = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/iTunes.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
+itunes-response = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/iTunes.js,requires-body=true,max-size=-1,timeout=60,engine=jsc
 
 # 📝 WPS Office
-wps-response = type=http-response,pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/wps.js,requires-body=true,max-size=0,timeout=10,engine=jsc
+wps-response = type=http-response,pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/wps.js,requires-body=true,max-size=0,timeout=10,engine=jsc
 
 # 🧠 Xmind
-xmind-response = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/_res\/devices,script-path=https://raw.githubusercontent.com/ekaznyra/NguyenNgocAnhTu/main/Module/js/xmind.js,requires-body=true,max-size=0,timeout=10,engine=jsc
+xmind-response = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/_res\/devices,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/xmind.js,requires-body=true,max-size=0,timeout=10,engine=jsc
 
 # 🔔 Alarmy Premium
-alarmy-response = type=http-response,pattern=^https:\/\/ars\.alar\.my\/api\/v2\/user\/sync,script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/alarmy.js,requires-body=true,max-size=0,timeout=10,engine=jsc
+alarmy-response = type=http-response,pattern=^https:\/\/ars\.alar\.my\/api\/v2\/user\/sync,script-path=https://raw.githubusercontent.com/huytqth2008010/ios/refs/heads/main/js/alarmy.js,requires-body=true,max-size=0,timeout=10,engine=jsc
 
 [Url Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
